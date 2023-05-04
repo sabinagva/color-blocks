@@ -1,7 +1,7 @@
 console.log('🟥 🟦 🟩 🟨');
 //activating jQuery
 $(document).ready(onReady);
-
+//defining buttons
 function onReady() {
 let redButton = $('red-btn');
 let blueButton = $('blue-btn');
@@ -23,6 +23,7 @@ $('#yellowContainer').on('click','.yellow-fill',removeYellow);
 
 
 }
+
 function redAppear() {
     $('#redContainer').append('<div class="block red-fill",></div>');
 }
@@ -50,4 +51,4 @@ function removeYellow(){
     $(this).remove();
 }
 
-/////////Append Boxes Function/////////////////////
+
