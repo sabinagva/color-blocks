@@ -2,19 +2,22 @@ console.log('🟥 🟦 🟩 🟨');
 //activating jQuery
 $(document).ready(onReady);
 
-//defining color counts
-let redCounter = 1;
-let blueCounter = 1;
-let greenCounter = 1;
-let yellowCounter = 1;
+
 
 
 function onReady() {
-    //defining buttons
+//defining buttons
 let redButton = $('red-btn');
 let blueButton = $('blue-btn');
 let greenButton = $('green-btn');
 let yellowButton = $('yellow-btn');
+
+//defining color counts
+//we equal them to 1 because numbers will always start counting from 1
+let redCounter = 1;
+let blueCounter = 1;
+let greenCounter = 1;
+let yellowCounter = 1;
 
 
 //call red button and when you click function redAppear happen
@@ -31,19 +34,15 @@ $('#yellow-btn').on('click',yellowCounter);
 
 
 //containers that we add second class too
+//also hold our actions in
 $('#boxContainer').on('click','.red-fill',removeRed);
 $('#boxContainer').on('click','.blue-fill',removeBlue);
 $('#boxContainer').on('click','.green-fill',removeGreen);
 $('#boxContainer').on('click','.yellow-fill',removeYellow);
 
-//containers that function go to
-// $('#redCounterContainer').on('click',redCount);
-// $('#blueCounterContainer').on('click',blueCount);
-// $('#greenCounterContainer').on('click',greenCount);
-// $('#yellowCounterContainer').on('click',yellowCount);
-
 //functions that make boxes appear
-//and count
+//and count. we use the same function for count since 
+//both counting and box appearing is happening from same action
 function redAppear() {
     $('#boxContainer').append('<div class="block red-fill",></div>');
     redCounter++;
@@ -74,8 +73,6 @@ function yellowAppear() {
 }
 
 }
-
-
 
 //functions that count
 
